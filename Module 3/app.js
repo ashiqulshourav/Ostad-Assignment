@@ -104,3 +104,16 @@ function getBrowserInfo(){
 
 getBrowserInfo();
 
+
+// 6. get user current location (latitude and longitude) using geolocation API.
+
+function getLocation(){
+    navigator.geolocation.getCurrentPosition((position)=>{
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        console.log(`6. User location latitute value is ${latitude} & longitude value is ${longitude}`);
+    });
+}
+
+getLocation();
