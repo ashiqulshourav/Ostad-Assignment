@@ -1,61 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
 
     <!-- Tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div class="container flex justify-center items-center min-h-screen">
-      <div class="w-[500px] border border-solid border-grey-500 rounded-lg p-5">
-        <h2 class="text-center text-2xl pb-5">Sign Up Form</h2>
-        <form action="#" class="sign-up-form">
-          <div class="mb-5">
-            <input
-              class="name w-full border p-2 rounded-md"
-              type="text"
-              placeholder="Enter your name"
-            />
-            <small class="hidden"></small>
-          </div>
-          <div class="mb-5">
-            <input
-              class="email w-full border p-2 rounded-md"
-              type="email"
-              placeholder="Enter your email"
-            />
-            <small class="hidden"></small>
-          </div>
-          <div class="mb-5">
-            <input
-              class="new-password w-full border p-2 rounded-md"
-              type="password"
-              placeholder="Enter new password"
-            />
-            <small class="hidden"></small>
-          </div>
-          <div class="mb-5">
-            <input
-              class="confirm-password w-full border p-2 rounded-md"
-              type="password"
-              placeholder="confirm new password"
-            />
-            <small class="hidden"></small>
-          </div>
-          <div class="flex justify-end">
-            <input
-              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
-              type="submit"
-              value="Submit"
-            />
-          </div>
-        </form>
-      </div>
+</head>
+
+<body>
+    <div class="container flex justify-center items-center min-h-screen m-auto">
+        <div class="w-[500px] border border-solid border-grey-500 rounded-lg p-5">
+            <h2 class="text-center text-2xl pb-5">Sign Up Form</h2>
+            <form action="#" class="sign-up-form">
+                <div class="mb-5">
+                    <input class="name w-full border p-2 rounded-md" type="text" placeholder="Enter your name" />
+                    <small class="hidden"></small>
+                </div>
+                <div class="mb-5">
+                    <input class="email w-full border p-2 rounded-md" type="email" placeholder="Enter your email" />
+                    <small class="hidden"></small>
+                </div>
+                <div class="mb-5">
+                    <input class="new-password w-full border p-2 rounded-md" type="password" placeholder="Enter new password" />
+                    <small class="hidden"></small>
+                </div>
+                <div class="mb-5">
+                    <input class="confirm-password w-full border p-2 rounded-md" type="password" placeholder="confirm new password" />
+                    <small class="hidden"></small>
+                </div>
+                <div class="flex justify-end">
+                    <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="validation.js"></script>
-  </body>
+</body>
+
 </html>

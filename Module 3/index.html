@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modul 3 Assignment</title>
-  </head>
-  <body>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
     <p>1. Please check console</p>
     <p>2. Please check console</p>
     <p>3. Please check console</p>
     <p>
-      4. Please click this
-      <a href="#" onclick="newWindow('https://www.example.com')">link </a>
-      to open new window
+        4. Please click this
+        <a href="#" onclick="newWindow('https://www.example.com')">link </a> to open new window
     </p>
     <p>5. Please check console</p>
     <p>6. Please check console</p>
     <p>7. Please do a action to get results</p>
     <ol>
-      <li>a. Click anywhere on this page</li>
-      <li>b. Type anything what you want</li>
-      <li>c. Hover this image</li>
+        <li>a. Click anywhere on this page</li>
+        <li>b. Type anything what you want</li>
+        <li>c. Hover this image</li>
     </ol>
-    <img
-      src="https://media.licdn.com/dms/image/D5603AQHHLRm_PPB0TA/profile-displayphoto-shrink_400_400/0/1680500618163?e=1692835200&v=beta&t=ALeTR2Y-Lg9SQsw5t7HnQoDalLMsz3SqOvkgwAQENFU"
-      alt=""
-      class="hover-to-change"
-    />
+    <img src="https://media.licdn.com/dms/image/D5603AQHHLRm_PPB0TA/profile-displayphoto-shrink_400_400/0/1680500618163?e=1692835200&v=beta&t=ALeTR2Y-Lg9SQsw5t7HnQoDalLMsz3SqOvkgwAQENFU" alt="" class="hover-to-change" />
     <p>8. HTML Dom</p>
     <p>
-      <small
-        ><strong>Click this button to change this paragraph text</strong></small
+        <small><strong>Click this button to change this paragraph text</strong></small
       >
     </p>
 
@@ -39,6 +41,39 @@
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum, nulla.
     </p>
     <button class="textChangeButton">click Me!</button>
+
+    <p>9. Form is in sign-up html file & validation is in validation.js file</p>
+
+    <p class="highlighted-text">10. Please click the button under this text to highlight this text</p>
+    <button class="to-highlight">To Highlight</button>
+
+    <p>11. Create Element & Append Element, Here has a ul but no items</p>
+    <ul class="addList"></ul>
+
+    <p>12.DOM Change Attribute Value </p>
+
+    <img src="https://media.licdn.com/dms/image/D5603AQHHLRm_PPB0TA/profile-displayphoto-shrink_400_400/0/1680500618163?e=1692835200&v=beta&t=ALeTR2Y-Lg9SQsw5t7HnQoDalLMsz3SqOvkgwAQENFU" alt="" class="image-change" />
+    <br>
+    <button class="change-image-button">Change the image</button>
+
+    <p>13. DOM Query Selector</p>
+    <p>Please click this button to change all paragraph text color & classes</p>
+    <p class="color-red" id="colorRed1">Color will be change to red</p>
+    <p class="color-red" id="colorRed2">Color will be change to red</p>
+    <p class="color-red" id="colorRed3">Color will be change to red</p>
+    <p class="color-red" id="colorRed4">Color will be change to red</p>
+    <p class="color-red" id="colorRed5">Color will be change to red</p>
+    <p class="color-red" id="colorRed6">Color will be change to red</p>
+    <p class="color-red" id="colorRed7">Color will be change to red</p>
+    <p class="color-red" id="colorRed8">Color will be change to red</p>
+    <p class="color-red" id="colorRed9">Color will be change to red</p>
+    <button class="change-class-color">Change Class & Color</button>
+
+    <p>14.AJAX Get Request: Please check console</p>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="app.js"></script>
   </body>
