@@ -49,8 +49,10 @@ const addToCartBtns = document.querySelectorAll('.add-to-cart');
 
 addToCartBtns.forEach((btn)=>{
     btn.addEventListener('click', (e) =>{
-        const productId = parseInt(e.target.parentNode.querySelector('.item-num').innerText);
+        const productId = Number(e.target.parentNode.querySelector('.item-num').innerText);
         const product = products.find(p => p.id === productId);
+
+        console.log(product, "Product")
         const quantity = 1;
 
         
@@ -67,14 +69,17 @@ function displayCartItems (){
     const cartBody = document.querySelector('.cart-body');
     const cartItems = getCartItems ();
 
-    cartItems.map((item)=>{
+    console.log(cartItems, "cartItems in DisplayCartItems");
+
+    cartItems.forEach((item)=>{
+        console.log(item, "Cart item item");
         cartBody.innerHTML += `
             <div class="item flex justify-between items-center">
             <span class="item-id">${item.product.id}</span>
             <span class="item-name">${item.product.title.slice(0, 20)}</span>
             <div class="product-img max-w-[80px] max-h-[100px]">
             <img
-                class="max-h-[100px]"
+                class="max-h-[50px]"
                 src="${item.product.image}"
                 alt="Hello"
             />
@@ -84,7 +89,7 @@ function displayCartItems (){
             <button class="quan-dec px-2 py-1 bg-red-400 text-white">
                 -
             </button>
-            <span class="item-quantity px-4">1</span>
+            <span class="item-quantity px-4">${item.quantity}</span>
             <button class="quan-inc px-2 py-1 bg-gray-700 text-white">
                 +
             </button>
@@ -98,64 +103,10 @@ function displayCartItems (){
         </div>`;
     });
     
-    sumOfAllItemPrice();
+    // sumOfAllItemPrice();
 }
 
 
-const quantityIncBtns = document.querySelectorAll('.quan-inc');
-const quantityDecBtns = document.querySelectorAll('.quan-dec');
-
-
-// Quantity Increment
-quantityIncBtns.forEach((btn)=>{
-    btn.addEventListener('click', function(){
-        let itemQuantity = this.parentNode.querySelector('.item-quantity');
-        let quantity = itemQuantity.innerText;
-        let item = this.parentNode.parentNode.querySelector('.item-total-price');
-        let itemPrice = parseInt(this.parentNode.parentNode.querySelector('.item-price').innerText.replace("$",""));
-        if(quantity > 0){
-            quantity++;
-            itemQuantity.innerText = quantity;
-            individualItemPriceUpdate(quantity, itemPrice, item)
-        }
-    });    
-});
-
-// Quantity Decreament
-quantityDecBtns.forEach((btn)=>{
-    btn.addEventListener('click', function(){
-        let itemQuantity = this.parentNode.querySelector('.item-quantity');
-        let quantity = itemQuantity.innerText;
-        let item = this.parentNode.parentNode.querySelector('.item-total-price')
-        let itemPrice = parseInt(this.parentNode.parentNode.querySelector('.item-price').innerText.replace("$",""));
-        if(quantity > 1){
-            quantity--;
-            itemQuantity.innerText = quantity;
-            individualItemPriceUpdate(quantity, itemPrice, item);
-        }
-    })
-});
-
-
-function individualItemPriceUpdate (quantity, price, item){
-    item.innerText = "$" + quantity * price;
-    sumOfAllItemPrice();
-}
-
-
-function sumOfAllItemPrice(){
-    const items = document.querySelectorAll('.item-total-price');
-    let grandTotal = document.querySelector('.grand-total');
-    let sum = 0;
-
-    [...items].map((item)=>{
-        sum += Number(item.innerText.replace("$",""));
-    });
-
-    grandTotal.innerText = `$${sum}`;
-}
-
-sumOfAllItemPrice();
 
 
 
