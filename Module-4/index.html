@@ -97,17 +97,13 @@
     <!-- cart popup start -->
     <div
       id="cartPopup"
-      class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto hidden h-[calc(100%-1rem)] max-h-full flex items-center justify-center bg-[rgba(0,0,0,0.8)]"
+      class="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto h-[100%] max-h-full flex items-center justify-center bg-[rgba(0,0,0,0.8)]"
     >
-      <div class="cart-popup-inner relative w-full max-w-2xl max-h-full">
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div class="cart-popup-inner relative w-full max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
           <!-- popup header -->
-          <div
-            class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Your cart items
-            </h3>
+          <div class="flex items-start justify-between p-4 border-b rounded-t">
+            <h3 class="text-xl font-semibold text-gray-900">Your cart items</h3>
             <button
               type="button"
               class="popup-close text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
@@ -131,11 +127,77 @@
           </div>
           <!-- popup body -->
           <div class="cart-body p-6 space-y-6">
-            <div class="item">
+            <div class="item flex justify-between items-center">
+              <span class="">id</span>
+              <span class="">Name</span>
+              <div class="">images</div>
+              <span class="">net price</span>
+              <div class="">quantity</div>
+              <span class="">total price</span>
+              <span class="">action</span>
+            </div>
+            <div class="item flex justify-between items-center">
               <span class="item-id">1</span>
-              span.item
+              <span class="item-name">Item Name</span>
+              <div class="product-img max-w-[80px] max-h-[100px]">
+                <img
+                  class="max-h-[100px]"
+                  src="./assets/img/hammer.jpg"
+                  alt="Hello"
+                />
+              </div>
+              <span class="item-price">$10</span>
+              <div class="quantity-box flex justify-between items-center">
+                <button class="quan-dec px-2 py-1 bg-red-400 text-white">
+                  -
+                </button>
+                <span class="item-quantity px-4">1</span>
+                <button class="quan-inc px-2 py-1 bg-gray-700 text-white">
+                  +
+                </button>
+              </div>
+              <span class="item-total-price">$10</span>
+              <button
+                class="remove-item p-2 px-5 bg-red-700 text-white rounded-lg"
+              >
+                remove
+              </button>
+            </div>
+            <div class="item flex justify-between items-center">
+              <span class="item-id">1</span>
+              <span class="item-name">Item Name</span>
+              <div class="product-img max-w-[80px] max-h-[100px]">
+                <img
+                  class="max-h-[100px]"
+                  src="./assets/img/hammer.jpg"
+                  alt="Hello"
+                />
+              </div>
+              <span class="item-price">$10</span>
+              <div class="quantity-box flex justify-between items-center">
+                <button class="quan-dec px-2 py-1 bg-red-400 text-white">
+                  -
+                </button>
+                <span class="item-quantity px-4">1</span>
+                <button class="quan-inc px-2 py-1 bg-gray-700 text-white">
+                  +
+                </button>
+              </div>
+              <span class="item-total-price">$10</span>
+              <button
+                class="remove-item p-2 px-5 bg-red-700 text-white rounded-lg"
+              >
+                remove
+              </button>
             </div>
           </div>
+          <!-- popup body end -->
+          <!-- popup footer start -->
+          <div class="p-2 bg-gray-700 text-white flex items-center justify-end">
+            <span class="pr-3">Grand total: </span>
+            <span class="grand-total">$0</span>
+          </div>
+          <!-- popup footer end -->
         </div>
       </div>
     </div>
