@@ -1,0 +1,7 @@
+nav li.active a {
+  text-decoration: underline;
+}
+
+.notification.active {
+  display: flex;
+}
