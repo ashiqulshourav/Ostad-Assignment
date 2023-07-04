@@ -52,7 +52,7 @@ const addToCartBtns = document.querySelectorAll('.add-to-cart');
 
 addToCartBtns.forEach((btn)=>{
     btn.addEventListener('click', (e) =>{
-        const productId = parent(e.target.parentNode.querySelector('.item-num').innerText);
+        const productId = parseInt(e.target.parentNode.querySelector('.item-num').innerText);
         const product = products.find(p => p.id === productId);
         const quantity = 1;
 
