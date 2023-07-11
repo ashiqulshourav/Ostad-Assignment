@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 nav li.active a {
   text-decoration: underline;
 }
@@ -5,3 +6,12 @@ nav li.active a {
 .notification.active {
   display: flex;
 }
+=======
+nav li.active a {
+  text-decoration: underline;
+}
+
+.notification.active {
+  display: flex;
+}
+>>>>>>> e4ab9201ef8eaa39ca8e52aeaf019a6a2b4ae34a
