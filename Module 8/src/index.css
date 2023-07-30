@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.all-center {
+  @apply flex justify-center items-center;
+}
+
+.nav-link.active {
+  @apply text-blue-500;
+}
