@@ -1,0 +1,10 @@
+*** Here I'm going to show the list of file working description
+1. public folder where we store public resources which can see any user when page loading It can be image, video or any file.
+2. App folder is app router
+3. inside app folder every folder is a single route page
+4. inside app folder layout.js is master Layout
+5. inside app folder page.js is the main page where we can pass home component by children props & this whole process work same as for all route page
+6. we can also separate our component by creating component name folder
+7. not-found.js file is working for any error, suppose user enter by unknown route then we can show not-found.js file data to the user
+8. We can also separate all api request by creating a file name is api
+*** I know lot of things remain in this list. I shared which i already know.
