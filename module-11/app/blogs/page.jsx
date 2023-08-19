@@ -21,12 +21,12 @@ export default function Blogs() {
           <div className="blogs-links pt-3 pl-3">
             {posts.map((post) => {
               return (
-                <>
-                  <h4 key={post.id} className="font-bold pb-3">
+                <div key={post.id}>
+                  <h4 className="font-bold pb-3">
                     {post.id}.{" "}
                     <Link href={`/blogs/${post.id}`}>{post.title}</Link>
                   </h4>
-                </>
+                </div>
               );
             })}
           </div>
