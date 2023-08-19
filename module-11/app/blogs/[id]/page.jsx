@@ -1,5 +1,3 @@
-"use client";
-
 import blogPosts from "@/data/blogData.json";
 
 export default function Post({ params }) {
