@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom CSS  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-content{
+    padding-top: 120px;
+    min-height: calc(100vh - 80px);
+}
+
+.blogs-item{
+    --item: 5;
+    width: calc(calc(100% - calc(2.5rem * calc(var(--item) - 1)))/var(--item))
+}
+
+@media only screen and (max-width: 1024px){
+    .blogs-item{
+        --item: 4;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .blogs-item{
+        --item: 3;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .blogs-item{
+        --item: 2;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .blogs-item{
+        --item: 1;
+    }
+}

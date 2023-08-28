@@ -1,0 +1,50 @@
+:root{
+    --yColor: #FDA402;
+}
+
+.navlink::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+.navlink.active{
+    color: var(--yColor);
+}
+
+.navlink.active::after{
+    opacity: 1;
+    left: 0;
+    background-color: var(--yColor);
+}
+
+.bg-black-05{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.mb-menu{
+    transition: 0.3s left ease;
+    -webkit-transition: 0.3s left ease;
+    -moz-transition: 0.3s left ease;
+    -ms-transition: 0.3s left ease;
+    -o-transition: 0.3s left ease;
+}
+
+.mb-menu.hide{
+    left: -100%;
+}
+
+
+.mb-menu.active{
+    left: 0;
+}
